@@ -57,13 +57,13 @@ namespace Calculator
         public static int ReadNumber()
         {
             int number = 0;
-            var isValid = false;
-            while(!isValid)
+            var isValidInput = false;
+            while(!isValidInput)
             {
                 Console.WriteLine("Enter a number");
                 var input = Console.ReadLine();
-                isValid = int.TryParse(input, out number);
-                if (!isValid)
+                isValidInput = int.TryParse(input, out number);
+                if (!isValidInput)
                     Console.WriteLine("That was not an int");
             }
             return number;
